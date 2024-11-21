@@ -23,6 +23,11 @@
       height: auto; /* Ölçülərin nisbətini qoruyur */
     }
 
+    #controls {
+      position: relative;
+      top: -70px; /* 70px yuxarı */
+    }
+
     #donateButton {
       margin-top: 10px;
       padding: 10px 20px;
@@ -85,8 +90,11 @@
     <img src="2.png" alt="Image 2">
   </div>
 
-  <button id="donateButton">Donate</button>
-  <p id="totalAmount">Total Collected: $0</p>
+  <!-- Donate controls -->
+  <div id="controls">
+    <button id="donateButton">Donate</button>
+    <p id="totalAmount">Total Collected: $0</p>
+  </div>
 
   <!-- Modal -->
   <div id="donateModal" class="modal">
