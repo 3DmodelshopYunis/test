@@ -12,18 +12,15 @@
       text-align: center;
     }
 
-    .container {
+    .image-container {
+      width: 100%; /* Ekranın 100%-ni tutur */
       display: flex;
-      flex-direction: row;
-      justify-content: center;
-      gap: 0px; /* Şəkillər arasındakı məsafə */
-      max-width: 1500px;
-      margin: 0 auto;
+      flex-direction: column; /* Şəkilləri alt-alta yerləşdirir */
     }
 
-    .image {
-      width: 100%; /* Hər iki şəkil yarım ekran tutacaq */
-      height: auto;
+    .image-container img {
+      width: 100%; /* Şəkillər ekranı tam doldurur */
+      height: auto; /* Ölçülərin nisbətini qoruyur */
     }
 
     #donateButton {
@@ -83,9 +80,9 @@
   </style>
 </head>
 <body>
-  <div class="container">
-    <img src="1.png" class="image" alt="Image 1">
-    <img src="2.png" class="image" alt="Image 2">
+  <div class="image-container">
+    <img src="1.png" alt="Image 1">
+    <img src="2.png" alt="Image 2">
   </div>
 
   <button id="donateButton">Donate</button>
@@ -153,4 +150,3 @@
   </script>
 </body>
 </html>
-
