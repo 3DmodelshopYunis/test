@@ -1,36 +1,27 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const modelList = document.getElementById("modelList");
-    const searchBar = document.getElementById("searchBar");
+function searchModels() {
+    const query = document.getElementById('search').value;
+    // Axtarış nəticələrini burada göstərə bilərsən
+    alert(`Axtardığınız model: ${query}`);
+}
 
-    // 3D modellərin siyahısı
-    const models = [
-        { name: "Car Model", file: "car_model.glb" },
-        { name: "House Model", file: "house_model.glb" },
-        { name: "Robot Model", file: "robot_model.glb" },
-        { name: "Tree Model", file: "tree_model.glb" }
-    ];
+// Modellərin nümunə məlumatları
+const models = [
+    { name: 'Model 1', img: 'model1.jpg', format: 'OBJ' },
+    { name: 'Model 2', img: 'model2.jpg', format: 'STL' },
+    { name: 'Model 3', img: 'model3.jpg', format: 'FBX' },
+];
 
-    // Modelləri ekrana əlavə edən funksiya
-    function displayModels(filter = "") {
-        modelList.innerHTML = "";
-        models
-            .filter(model => model.name.toLowerCase().includes(filter.toLowerCase()))
-            .forEach(model => {
-                const modelDiv = document.createElement("div");
-                modelDiv.classList.add("model");
-                modelDiv.innerHTML = `
-                    <h3>${model.name}</h3>
-                    <a href="${model.file}" download>Download</a>
-                `;
-                modelList.appendChild(modelDiv);
-            });
-    }
-
-    // Axtarış funksiyası
-    searchBar.addEventListener("input", (e) => {
-        displayModels(e.target.value);
+// Modelləri yükləmək və göstərmək
+window.onload = function() {
+    const modelList = document.getElementById('model-list');
+    models.forEach(model => {
+        const div = document.createElement('div');
+        div.innerHTML = `
+            <img src="${model.img}" alt="${model.name}" width="100%">
+            <h3>${model.name}</h3>
+            <p>Format: ${model.format}</p>
+            <button>Yüklə</button>
+        `;
+        modelList.appendChild(div);
     });
-
-    // Sayt açıldıqda modelləri göstər
-    displayModels();
-});
+};
