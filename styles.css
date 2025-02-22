@@ -8,37 +8,60 @@ body {
 header {
     background-color: #333;
     color: white;
-    padding: 15px;
+    padding: 10px 0;
     text-align: center;
 }
 
-#searchBar {
-    width: 80%;
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+#search-section {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#search-section input {
     padding: 10px;
-    margin-top: 10px;
-    font-size: 16px;
+    width: 50%;
 }
 
-main {
+#search-section button {
+    padding: 10px;
+}
+
+#models-section {
+    text-align: center;
+}
+
+#model-list {
     display: flex;
+    justify-content: space-around;
     flex-wrap: wrap;
-    justify-content: center;
-    padding: 20px;
 }
 
-.model {
+#model-list div {
     background-color: white;
+    padding: 10px;
     margin: 10px;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 200px;
     text-align: center;
 }
 
 footer {
+    text-align: center;
+    padding: 20px;
     background-color: #333;
     color: white;
-    text-align: center;
-    padding: 10px;
-    margin-top: 20px;
 }
